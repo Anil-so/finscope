@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cf-build": "npx @opennextjs/cloudflare build --dangerouslyUseUnsupportedNextVersion",
+    "cf-build": "npx @opennextjs/cloudflare",
     "preview": "npm run cf-build && wrangler dev"
   },
   "dependencies": {
@@ -17,7 +17,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.4",
+    "@opennextjs/cloudflare": "0.5.0",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
