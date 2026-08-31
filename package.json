@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cf-build": "npx @opennextjs/cloudflare && node -e \"require('fs').copyFileSync('.open-next/worker.js', '.open-next/assets/_worker.js')\"",
+    "cf-build": "npx @opennextjs/cloudflare && node -e \"const fs = require('fs'); fs.copyFileSync('.open-next/worker.js', '.open-next/assets/_worker.js'); ['env', 'middleware', 'server-functions'].forEach(d => fs.existsSync('.open-next/' + d) && fs.cpSync('.open-next/' + d, '.open-next/assets/' + d, {recursive: true}));\"",
     "preview": "npm run cf-build && wrangler pages dev .open-next/assets"
   },
   "dependencies": {
