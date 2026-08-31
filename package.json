@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cf-build": "npx @opennextjs/cloudflare",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "cf-build": "npx @opennextjs/cloudflare build --dangerouslyUseUnsupportedNextVersion",
     "preview": "npm run cf-build && wrangler dev"
   },
   "dependencies": {
