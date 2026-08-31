@@ -13,6 +13,11 @@
 # production
 /build
 
+# cloudflare workers / opennext
+/.open-next/
+/.vercel/
+/.wrangler/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
